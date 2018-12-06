@@ -1,6 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const {ObjectID} = require('mongodb');
+const _ = require('lodash');
 
 
 var {mongoose} = require('./db/mongoose.js');
@@ -69,6 +70,8 @@ app.delete('/todos/:id', (req, res) => {
         
     }).catch((e) => res.status(404).send(e));
 });
+
+app.patch('/todos/:id', )
 
 app.listen(port, () => console.log(`server started in port ${port}`));
 
